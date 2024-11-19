@@ -1,0 +1,99 @@
+body {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+header {
+  background-color: #162e56;
+  color: white;
+  min-height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Navbar */
+
+nav {
+  display: inline-flex;
+}
+
+nav h3 {
+  align-self: flex-start;
+}
+
+nav ul {
+  list-style: none;
+  margin: 10px;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  display: block;
+  padding: 8px;
+
+  color: white;
+}
+
+.intro-section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+/* Imgs */
+
+#headshot {
+  height: 15em;
+  width: auto;
+  border-radius: 10%;
+  align-self: center;
+}
+
+/* Project preview */
+.project-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.project-item {
+  height: fit-content;
+  width: 48%;
+
+  border: 2px solid #f6f6f6;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.project-preview-img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.tech-list {
+  display: inline;
+}
+
+.tech-list-item {
+  display: inline;
+  border: 3px solid #162e56;
+  border-radius: 20px;
+  padding: 5px;
+  width: max-content;
+}
+
+footer {
+  margin: auto;
+}
