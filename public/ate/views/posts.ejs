@@ -1,0 +1,78 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container-fluid heading-box">
+  <div class="row align-items-center">
+    <div class="col">
+      <h1>All Blog Posts</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container main-content">
+  <div class="row">
+    <div class="col-md-8">
+      <h4>What would you like to share today</h4>
+      <form action="submit" method="POST">
+        <div class="mb-3">
+          <label for="postSubject" class="form-label">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            name="postSubject"
+            id="postSubject"
+            aria-describedby="postSubject"
+            required
+          />
+          <div id="emailHelp" class="form-text"></div>
+        </div>
+        <label for="postBody" class="form-label">Body</label>
+        <div class="input-group">
+          <textarea
+            class="form-control"
+            name="postBody"
+            aria-label="With textarea"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" value="OK" class="pink-btn">Submit</button>
+      </form>
+    </div>
+
+    <div class="col-md-4">
+      <ul id="listOfPosts">
+        <% if(locals.posts){ %> <% posts.forEach((post) => {%>
+        <li>
+          <div class="card text-start">
+            <div class="card-body">
+              <h5 class="card-title"><%= post.subject %></h5>
+              <!-- truncate the body in this preview -->
+              <p><%= post.body.slice(0,100) %>...</p>
+
+              <!-- READ -->
+              <a href="/posts/<%= post.id %>" class="card-link navigate"
+                >Read</a
+              >
+
+              <!-- EDIT -->
+              <a href="/posts/<%= post.id %>/edit" class="card-link navigate">
+                Edit</a
+              >
+
+              <!-- DELETE -->
+              <form
+                action="/posts/<%= post.id %>?_method=DELETE"
+                method="POST"
+                class="delete-form"
+              >
+                <button type="submit" class="card-link navigate">Delete</button>
+              </form>
+            </div>
+          </div>
+        </li>
+        <% }) %> <% } %>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<%- include("partials/footer.ejs") %>

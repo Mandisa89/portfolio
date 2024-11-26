@@ -1,0 +1,28 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container main-content">
+  <div class="container-fluid heading-box">
+    <div class="row align-items-center">
+      <div class="col">
+        <h1><%= post.subject %></h1>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <p><%= post.body %></p>
+  </div>
+
+  <a href="/posts" class="card-link navigate"> << Back</a>
+
+  <form
+    action="/posts/<%= post.id %>?_method=DELETE"
+    method="POST"
+    class="delete-form"
+  >
+    <button type="submit" class="card-link navigate">Delete</button>
+  </form>
+
+  <a href="/posts/<%= post.id %>/edit" class="card-link navigate"> Edit</a>
+</div>
+<%- include("partials/footer.ejs") %>
