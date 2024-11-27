@@ -1,5 +1,5 @@
 body {
-  background-color: white;
+  background-color: fff;
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -8,12 +8,13 @@ body {
 }
 
 header {
-  background-color: #162e56;
+  /* background-color: #162e56; */
   color: white;
   min-height: 20%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-bottom: 2px solid #f6f6f6;
 }
 
 /* Navbar */
@@ -25,6 +26,7 @@ nav {
 
 nav h3 {
   font-family: Georgia, "Times New Roman", Times, serif;
+  padding-left: 10px;
 }
 
 nav ul {
@@ -48,7 +50,7 @@ nav ul li a {
 
 .intro-section {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   max-width: 600px;
@@ -58,14 +60,24 @@ nav ul li a {
 
 /* Imgs */
 
+#company-logo {
+  width: 50px;
+}
+
 #headshot {
   height: 15em;
   width: auto;
-  border-radius: 50%;
+  border-radius: 50px;
   align-self: center;
+  padding: 20px;
 }
 
-/* Project preview */
+/* Featured Projects */
+
+.project-section {
+  padding: 50px;
+}
+
 .project-list {
   display: flex;
   flex-direction: row;
@@ -108,6 +120,72 @@ nav ul li a {
   width: max-content;
 }
 
+/* CONTACT FORM */
+
+.contact-section {
+  padding: 50px;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+  margin: auto;
+}
+
+label {
+  display: inline-block;
+  min-width: 90px;
+  text-align: left;
+}
+
+input,
+textarea {
+  font: 1em sans-serif;
+  width: 300px;
+  box-sizing: border-box;
+
+  border: 2px solid #f6f6f6;
+}
+
+input:focus,
+textarea:focus {
+  outline-style: 2px solid;
+  outline-color: #000;
+}
+
+textarea {
+  vertical-align: top;
+  height: 5em;
+}
+
+/* Buttons */
+
+button {
+  width: 90px;
+  margin-left: 94px;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.whatsapp-button {
+  background-color: #24d366;
+}
+
+#whatsapp-icon {
+  font-size: 2em;
+}
+
+.icon {
+  width: 20px;
+}
 footer {
   margin: 20px auto;
 }
