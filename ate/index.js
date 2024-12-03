@@ -39,6 +39,10 @@ app.get("/posts/:id", (req, res) => {
   }
 });
 
+// API key handling here //
+
+// app.get("") //
+
 app.post("/submit", (req, res) => {
   const postSubject = req.body.postSubject;
   const postBody = req.body.postBody;
