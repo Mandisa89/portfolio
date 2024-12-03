@@ -1,7 +1,7 @@
 function initMap() {
   const mapOptions = {
-    center: { lat: -25.98953, lng: 28.12843 }, // Center: Midrand
-    zoom: 10,
+    center: { lat: -26.157, lng: 28.0227 }, // Center: Greenside
+    zoom: 12,
   };
 
   const map = new google.maps.Map(document.getElementById("map"), mapOptions);
@@ -9,15 +9,15 @@ function initMap() {
   // Location data
   const locations = [
     {
-      lat: -25.8889,
-      lng: 28.1817,
-      name: "Centurion Branch",
-      address: "202 Hendrik Verwoerd Dr, Eldoraigne, Centurion, 0149",
+      lat: -26.139271271372834,
+      lng: 27.991576506986824,
+      name: "Arthur Bales, Linden",
+      address: "62 4th Ave, Linden, Randburg, 2104",
     },
     {
       lat: -26.157,
       lng: 28.0227,
-      name: "Greenside Branch",
+      name: "Greenside Embroidery Circle",
       address: "53 Troon Road, Greenside",
     },
   ];

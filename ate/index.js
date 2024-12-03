@@ -3,9 +3,12 @@ import ejs from "ejs";
 import bodyParser from "body-parser";
 import { v4 as uuidv4 } from "uuid";
 import methodOverride from "method-override";
+import dotenv from "dotenv";
+dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
+const apiKey = process.env.GOOGLE_MAPS_API_KEY;
 
 let posts = [];
 
@@ -27,7 +30,9 @@ app.get("/posts", (req, res) => {
 });
 
 app.get("/contact", (req, res) => {
-  res.render("contact.ejs");
+  res.render("contact.ejs", {
+    googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY,
+  });
 });
 
 app.get("/posts/:id", (req, res) => {

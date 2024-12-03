@@ -12,24 +12,35 @@
   <div class="row">
     <div class="col-md">
       <h3>Address:</h3>
+      <br />
+      <h4>Embroidery Circle</h4>
       <p>
         53 Troon Road, <br />
         Emmarentia, <br />
         Johannesburg
+      </p>
+
+      <h4>Monthly social at Arthur Bales</h4>
+      <p>
+        62 4th Ave, <br />
+        Linden, <br />
+        Randburg, <br />
+        Johannesburg <br />
+        2104
       </p>
       <h3>Phone:</h3>
       <p>+27 71 123 4567</p>
     </div>
 
     <!-- Google Maps  -->
-    <div class="col-md-9">
+    <div class="col-md-8">
       <div id="map"></div>
 
       <script src="/js/maps-scripts.js"></script>
       <script
         async
         defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVnTi9f1S1s41BBasoNb6-EsHO0mpbw7U&callback=initMap"
+        src="https://maps.googleapis.com/maps/api/js?key=<%= googleMapsApiKey %>&callback=initMap"
       ></script>
     </div>
     <%- include("partials/footer.ejs") %>
